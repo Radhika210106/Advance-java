@@ -29,3 +29,67 @@ public class Main {
       }
     }
 }
+//array
+import java.util.Scanner;
+
+public class main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a []={1,2,3,4,5};
+        for(int x:a){
+          System.out.println(x+" ");
+        }
+    }
+}
+//user input
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int size=sc.nextInt();
+    int sum=1;
+    int arr [] =new int[size];
+    for(int i=0;i<size;i++){
+    arr[i]=sc.nextInt();
+    
+    }
+    for(int i=0;i<size;i++){
+      System.out.println(arr[i]+" ");
+      sum=sum * arr[i];
+    }
+    System.out.println(sum);
+    
+    
+    
+    }
+}
+//max
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int size = sc.nextInt();
+        int arr[] = new int[size];
+
+        
+        for (int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+        }
+        int max = arr[0];
+
+    
+        for (int i = 1; i < size; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+
+      
+        System.out.println("Maximum " + max);
+    }
+}
+
+
