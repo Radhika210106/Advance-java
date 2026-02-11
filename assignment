@@ -1,0 +1,45 @@
+//1) Armstrong number:
+ import java.util.Scanner;
+
+public class ArmstrongNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+
+        int original = num;
+        int sum = 0;
+
+        while (num > 0) {
+            int r = num % 10;
+            sum = sum + (r * r * r);
+            num = num / 10;
+        }
+
+        if (sum == original) {
+            System.out.println("Is an Armstrong number");
+        } else {
+            System.out.println("Is not an Armstrong number");
+        }
+
+    }
+}
+//2)get the number:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	   Scanner sc=new Scanner(System.in);
+	   char ch=sc.next().charAt(0);
+	  
+	  if((ch>=65&&ch<=90)||(ch>=97&&ch<=122)){
+	    System.out.println("alphabets");
+	  }
+	 else if(ch>=48&&ch<=57){
+	   System.out.println("digits");
+	 } 
+	 else{
+	   System.out.println("special character");
+	 }
+	 sc.close();
+	}
+}
