@@ -300,4 +300,64 @@ public class Solution {
         }
     }
 }
+//code arithmetic operator:
+import java.io.*;
+import java.util.*;
 
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int sum=a+b;
+        int diff=a-b;
+        int pro=a*b;
+        int que=a/b;
+        int rem=a%b;
+        System.out.println("Sum: "+sum);
+         System.out.println("Difference: "+diff);
+        
+         System.out.println("Product: "+pro);
+        
+         System.out.println("Quotient: "+que);
+         System.out.println("Remainder: "+rem);
+        
+        
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+//code smart shopper:
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int cost1=sc.nextInt();
+        int quantity1=sc.nextInt();
+        int cost2=sc.nextInt();
+        int quantity2=sc.nextInt();
+        int cost3=sc.nextInt();
+        int quantity3=sc.nextInt();
+        int budget=sc.nextInt();
+        double beforetax=(cost1*quantity1)+(cost2*quantity2)+(cost3*quantity3);
+        double aftertax=beforetax *1.10;
+        System.out.printf("Total (Before Tax): %.2f\n", beforetax);
+       System.out.printf("Total (After Tax): %.2f\n", aftertax);
+        if(aftertax<=budget)
+            
+        {
+          System.out.println("Within Budget");
+        }else{
+             System.out.println("Over Budget");
+        }
+        
+        
+
+        
+        
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
