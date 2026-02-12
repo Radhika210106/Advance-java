@@ -91,5 +91,65 @@ public class Main {
         System.out.println("Maximum " + max);
     }
 }
+//ODD EVEN
+import java.io.*;
+import java.util.*;
 
+public class Solution {
 
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+    int size=sc.nextInt();
+    
+        
+    int arr [] =new int[size];
+    for(int i=0;i<size;i++){
+    arr[i]=sc.nextInt();
+    
+    }
+        int evencount=0;
+        int oddcount=0;
+    for(int i=0;i<size;i++){
+        if(arr[i]%2==0){
+    
+           evencount++;
+        }else{
+            oddcount++;
+            
+        }
+        
+      
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+         System.out.println("Even: "+evencount);
+        System.out.println("Odd: "+oddcount);
+}
+}
+
+//avg
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int size=sc.nextInt();
+    int sum=0;
+        float avg=0;
+    int arr [] =new int[size];
+    for(int i=0;i<size;i++){
+    arr[i]=sc.nextInt();
+    
+    }
+      
+    for(int i=0;i<size;i++){
+      
+      sum=sum+arr[i];
+        avg=sum/size;
+    }
+        
+    System.out.printf("%.2f",avg);
+    
+    
+    
+    }
+}
