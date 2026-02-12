@@ -153,3 +153,151 @@ public class Main {
     
     }
 }
+//code
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int size = sc.nextInt();
+        int[] arr = new int[size];
+        for (int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+        }
+        if (size% 2 == 1) {
+            System.out.println(arr[size / 2]);
+        } else {
+            int mid1 = arr[size/ 2 - 1];
+            int mid2 = arr[size/ 2];
+            System.out.println((mid1 + mid2) / 2);
+        }
+    }
+}
+
+//code
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int size = sc.nextInt();
+        int arr[] = new int[size];
+
+          int value = sc.nextInt();
+        for(int i = 0; i < size; i++){
+            arr[i] = sc.nextInt();
+        }
+
+     
+        boolean found=false;
+
+        for(int i = 0; i < size; i++){
+            for(int j = i + 1; j < size; j++){
+                if(arr[i] + arr[j] == value){
+                    found = true;
+                    break;
+                }
+            }
+        }
+
+        if(found){
+            System.out.print("Yes");
+        } else {
+            System.out.print("No");
+        }
+    }
+}
+//code
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+            
+        }
+        int search=sc.nextInt();
+        int index = -1;  
+
+        for(int i=0;i<n;i++){
+            if(search==arr[i]){
+                index=i;
+                break;
+                
+                
+            }
+        } 
+        System.out.println(index);
+        
+        
+        
+}
+}
+//code
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+          Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+            
+        }
+        int main=arr[0]*arr[1];
+        for(int i=0;i<n;i++){
+            for(int j=i+1;j<n;j++){
+                int submain=arr[i]*arr[j];
+                if(submain>main){
+                    main=submain;
+                }
+                
+         }
+}
+        System.out.println(main);
+    }
+}
+//code
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int size = sc.nextInt();
+        int arr[] = new int[size];
+
+        for(int i = 0; i < size; i++){
+            arr[i] = sc.nextInt();
+        }
+
+        for(int i = 0; i < size; i++){
+            boolean led = true;
+
+            for(int j = i + 1; j < size; j++){
+                if(arr[j] > arr[i]){
+                    led = false;
+                    break;
+                }
+            }
+
+            if(led){
+                System.out.print(arr[i] + " ");
+            }
+        }
+    }
+}
+
