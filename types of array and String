@@ -51,7 +51,7 @@ public class Main {
     }
 }
             
-//code diagonal:
+//code traingles:
 import java.util.*;
 
 public class Main {
