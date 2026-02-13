@@ -1,0 +1,273 @@
+//code 
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int rsize=sc.nextInt();
+       int csize=sc.nextInt();
+       int arr[][]=new int[rsize][csize];
+       for(int i=0;i<rsize;i++){
+         for(int j=0;j<csize;j++){
+           arr[i][j]=sc.nextInt();
+         }
+       }
+       
+       for(int i=0;i<rsize;i++){
+         for(int j=0;j<csize;j++){
+          System.out.print(arr[i][j]+" ");
+         }
+         System.out.println();
+       }
+       
+       
+       
+      
+    }
+}
+//code add the boder element 
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int rsize=sc.nextInt();
+       int csize=sc.nextInt();
+       int arr[][]=new int[rsize][csize];
+       for(int i=0;i<rsize;i++){
+         for(int j=0;j<csize;j++){
+           arr[i][j]=sc.nextInt();
+         }
+       }
+       int sum=0;
+       for(int i=0;i<rsize;i++){
+         for(int j=0;j<csize;j++){
+          if(i==0 || j==0|| i==rsize-1 || j==csize-1){
+            sum=sum+arr[i][j];
+          }
+         }
+       }
+       System.out.println(sum);
+    }
+}
+            
+//code diagonal:
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int rsize=sc.nextInt();
+      int csize=sc.nextInt();
+       int arr[][]=new int[rsize][csize];
+       for(int i=0;i<rsize;i++){
+         for(int j=0;j<csize;j++){
+           arr[i][j]=sc.nextInt();
+         }
+       }
+       int sum=0;
+       for(int i=0;i<rsize;i++){
+         for(int j=0;j<csize;j++){
+          if( i+j==rsize-1){
+            sum=sum+arr[i][j];
+          }
+         }
+       }
+       System.out.println(sum);
+    }
+}
+            
+//code String
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+    // String str="innate talent";
+     String str1=sc.next();
+     sc.nextLine();
+     String str2=sc.nextLine();
+      System.out.println(str1);
+     System.out.println(str2);
+    }
+}
+            
+  // string methods 
+/first method:
+       string str="innate talent";
+//second method only using string:
+     string str2=sc.nextLine();
+//for float or other with string:
+    sc.nextLine();
+    string str2=sc.nextLine();
+                                                  string methods
+1.//charAt:
+        return the character at the specified   index(char)
+   EG:
+       String str="innate talent";
+       System.out.print(str.charAt(0));
+2.//compareTo:
+    compare two strings with its asci value and reduce the value when the string differ in their cases(int)
+EG:
+    String str="innate talent";
+    String str1="Innate Talent";
+    System.out.print(str.compareTo(str1));
+
+3.//compareToIgnoreCAse():
+           compare two strings but ignore space differences(int)
+EG:
+      String str="innate talent";
+      String str1="Innate Talent";
+      System.out.print(str.compareToIgnoreCase(str1));
+4.//concat():
+     append a string to the end of another string(string)
+EG:
+method1:
+      String str="innate talent";
+      String str1="Innate Talent";
+      System.out.print(str.concat(str1));
+method 2(using +):
+      System.out.print(str+" "+str1);
+5.//contains():
+    chcek if the string contain a sequence of characters(boolean)
+EG:
+      String str="innate talent";
+      String str1="innate ";
+      System.out.print(str.contains(str1));
+6.//indexOf():
+    return the position of the first found occurence of specified characters in a string(int)
+EG:
+        String str="Innate Talent";
+        System.out.print(str.indexOf('n'));
+       System.out.println(str.indexOf("ate Tal"));
+   
+7.//isEmpty():
+      check whether a string is empty or not(boolean)
+EG:
+         String str="Innate Talent";
+        System.out.print(str.indexOf('n'));
+        System.out.println(str.indexOf("ate Tal"));
+   
+8.//lastIndexOf():
+             return the position of the last found occurence of specified characters in a string(int)
+EG:
+       String str="Innate Talent";
+       System.out.println(str.lastIndexOf('t'));
+       System.out.println(str.lastIndexOf("Talent"));
+9.//length():
+     return the length of string (int)
+
+  EG:
+      String str="innate talent";
+      String str1="innate ";
+      System.out.print(str1.length());
+     
+10.//equals:
+     compare two strings return true if the strings are equal
+EG:
+       str="Innate Talent";
+      String str1="and";
+       System.out.println(str.equals(str1));
+11.//equalIgnoreCase:
+       compare two strings,ignoring case consideration
+EG:
+        String str="Innate Talent";
+       String str1="innate talent";
+       System.out.println(str.equalsIgnoreCase(str1));
+12.//endswith:
+        check whether a string ends with specified character
+EG:
+
+    
+
+
+
+/first method:
+       string str="innate talent";
+//second method only using string:
+     string str2=sc.nextLine();
+//for float or other with string:
+    sc.nextLine();
+    string str2=sc.nextLine();
+                                                  string methods
+1.//charAt:
+        return the character at the specified   index(char)
+   EG:
+       String str="innate talent";
+       System.out.print(str.charAt(0));
+2.//compareTo:
+    compare two strings with its asci value and reduce the value when the string differ in their cases(int)
+EG:
+    String str="innate talent";
+    String str1="Innate Talent";
+    System.out.print(str.compareTo(str1));
+
+3.//compareToIgnoreCAse():
+           compare two strings but ignore space differences(int)
+EG:
+      String str="innate talent";
+      String str1="Innate Talent";
+      System.out.print(str.compareToIgnoreCase(str1));
+4.//concat():
+     append a string to the end of another string(string)
+EG:
+method1:
+      String str="innate talent";
+      String str1="Innate Talent";
+      System.out.print(str.concat(str1));
+method 2(using +):
+      System.out.print(str+" "+str1);
+5.//contains():
+    chcek if the string contain a sequence of characters(boolean)
+EG:
+      String str="innate talent";
+      String str1="innate ";
+      System.out.print(str.contains(str1));
+6.//indexOf():
+    return the position of the first found occurence of specified characters in a string(int)
+EG:
+        String str="Innate Talent";
+        System.out.print(str.indexOf('n'));
+       System.out.println(str.indexOf("ate Tal"));
+   
+7.//isEmpty():
+      check whether a string is empty or not(boolean)
+EG:
+         String str="Innate Talent";
+        System.out.print(str.indexOf('n'));
+        System.out.println(str.indexOf("ate Tal"));
+   
+8.//lastIndexOf():
+             return the position of the last found occurence of specified characters in a string(int)
+EG:
+       String str="Innate Talent";
+       System.out.println(str.lastIndexOf('t'));
+       System.out.println(str.lastIndexOf("Talent"));
+9.//length():
+     return the length of string (int)
+
+  EG:
+      String str="innate talent";
+      String str1="innate ";
+      System.out.print(str1.length());
+     
+10.//equals:
+     compare two strings return true if the strings are equal
+EG:
+       str="Innate Talent";
+      String str1="and";
+       System.out.println(str.equals(str1));
+11.//equalIgnoreCase:
+       compare two strings,ignoring case consideration
+EG:
+        String str="Innate Talent";
+       String str1="innate talent";
+       System.out.println(str.equalsIgnoreCase(str1));
+12.//endswith:
+        check whether a string ends with specified character
+EG:
+
+    
+
+
+
