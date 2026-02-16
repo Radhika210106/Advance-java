@@ -1,0 +1,115 @@
+//code linear search
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int size=sc.nextInt();
+    int arr [] =new int[size];
+    for(int i=0;i<size;i++){
+    arr[i]=sc.nextInt();
+    
+    }
+    int search=sc.nextInt();
+    boolean indicate=false;
+    
+    for(int i=0;i<size;i++){
+      if(arr[i]==search){
+         indicate=true;
+        System.out.println(i+1 +"position");
+       // break;
+      }
+    }if(indicate==false){
+      System.out.println("no data present");
+    }
+    }
+}
+//code reverse position
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int size=sc.nextInt();
+    int arr [] =new int[size];
+    for(int i=0;i<size;i++){
+    arr[i]=sc.nextInt();
+    
+    }
+    int search=sc.nextInt();
+    boolean indicate=false;
+    int a=1;
+    for(int i=size-1;i>=0;i--,a++){
+      if(arr[i]==search){
+         indicate=true;
+        System.out.println(a +" position");
+       // break;
+      }
+    }if(indicate==false){
+      System.out.println("no data present");
+    }
+    }
+}
+//code:binary search
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int arr[]=new int[n];
+      for(int i=0;i<n;i++){
+        arr[i]=sc.nextInt();
+      }
+      Arrays.sort(arr);
+      int search=sc.nextInt();
+      boolean a=false;
+      int start=0,end=n-1;
+      while(start<=end){
+        int mid=(start+end)/2;
+        if(arr[mid]==search){
+          System.out.println(mid+1 + " present");
+          a=true;
+          break;
+        }
+      
+      else if(search>arr[mid]){
+       start=mid+1;
+      }else{
+        end=mid+1;
+      }
+      
+      
+      
+    }
+    if(a==false){
+      System.out.println("no data");
+    }
+}
+}
+//code bubble sort
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int arr[]=new int[n];
+      for(int i=0;i<n;i++){
+        arr[i]=sc.nextInt();
+      }
+      for(int i=0;i<n;i++){
+        for(int j=0;j<n-i-1;j++){
+          if(arr[j]>arr[j+1]){
+            int p= arr[j];
+            arr[j]=arr[j+1];
+            arr[j+1]=p;
+          }
+          //System.out.print("1");
+        }
+      System.out.println();
+        
+      }
+        System.out.println(Arrays.toString(arr));
+    }
+}
