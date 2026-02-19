@@ -326,4 +326,119 @@ void deleteatbeg(){
 		}
 //all method(insert,delete)
 https://www.onlinegdb.com/Ntju9Nt5p
-//doublylinkedlist
+
+\\\\\\\ singly linked list:
+https://onlinegdb.com/vZGIerloL \\\add
+https://onlinegdb.com/KASK-Htlm \\\del
+https://onlinegdb.com/6BnIFbxBB\\\del at beg      
+https://onlinegdb.com/Ntju9Nt5p  \\\\overall delete pos
+
+\\\\\ doubly linked list:
+https://onlinegdb.com/oh2hFDTjH \\\ dele portion
+https://onlinegdb.com/GvZOLio3f \\\\del at pos
+//circular singlylinkedlist:
+import java.util.*;
+class Node {
+	int data;
+	Node next;
+	Node(int data) {
+		this.data = data;
+		next=null;
+	}
+}
+class circularsinglylinkedlist {
+	Node head=null;
+	Node tail=null;
+	int size=0;
+	void addatlast(int data) {
+		Node newnode = new Node(data);
+		size++;
+		if(head==null) {
+			head=tail=newnode;
+		}
+		else {
+			tail.next=newnode;
+			tail=newnode;
+			tail.next=head;
+		}
+
+	}
+	void addatbeg(int data) {
+    Node newnode = new Node(data);
+    size++;
+
+    if(head==null) {
+        head = tail = newnode;
+        tail.next = head;
+    }
+    else {
+        newnode.next = head; 
+        head = newnode;       
+        tail.next = head;     
+    }
+}
+
+void deleteatbeg() {
+   if(head==null) {
+	 System.out.println(" no element to print");
+	 return;
+   }
+   if(head==tail){
+     head=tail=null;
+     System.out.println(" all element deleted");
+     return;
+   }
+  head=head.next;
+   tail.next=head;
+   size--;
+}
+void deleteatlast() {
+   if(head==null) {
+	 System.out.println(" no element to print");
+	 return;
+   }
+   if(head==tail){
+     head=tail=null;
+     System.out.println(" all element deleted");
+   }
+   Node temp=head;
+   while(temp.next!=tail){
+     temp=temp.next;
+   }
+   tail=temp;
+   tail.next=head;
+   size--;
+}
+	 
+	void display() {
+		if(head==null) {
+			System.out.println("There is no element to print");
+			return;
+		}
+	Node temp=head;
+	do{
+	 System.out.print(temp.data+" ");
+	 temp=temp.next;
+	}while(temp!=head);
+	System.out.println();
+	}
+}
+public class Main {
+	public static void main(String[] args) {
+		circularsinglylinkedlist c = new circularsinglylinkedlist();
+		c.addatlast(10);
+		c.addatlast(20);
+		c.addatlast(30);
+		c.addatbeg(40);
+		c.display();
+		c.deleteatlast();
+		c.deleteatbeg();
+		c.display();
+	}
+}
+//circular doublylinkedlist:
+https://www.onlinegdb.com/QGD9FqeOp
+//stack(using methods)(using methods with array)
+https://www.onlinegdb.com/1APbTQIE9K
+//Queue
+https://www.onlinegdb.com/YLcfy25F4
