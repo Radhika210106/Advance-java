@@ -1,0 +1,26 @@
+//node creation
+import java.util.*;
+class Node {
+    int data;
+    Node right;
+    Node left;
+
+    Node(int data) {
+       this. data = data;
+        Node left = null;
+       Node  right=null;
+        
+    }
+}
+public class Main{
+  public static void main(String[]args){
+    Node root=new Node(10);
+    Node n1=new Node(20);
+    root.left=n1;
+     Node n2=new Node(30);
+    root.right=n2;
+   
+    System.out.println(root.data+" "+root.left.data+" "+root.right.data);
+  }
+}
+
